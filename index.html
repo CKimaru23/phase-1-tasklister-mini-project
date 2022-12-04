@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Task Lister</title>
+</head>
+<body>
+    <header>
+        <h1>To Do List: <span style="font-size: 0.5em">click "Add Task" to add your task.</span></h1>
+        <form id="new-task-form">
+            <input type="text" id="new-task-input" placeholder="What is your plan?"/>
+            <input type="text" id="new-user-input" placeholder="Type in the user" />
+            <input type="date" id="date" value="Due Date"/>
+            <input type="text" id="duration" placeholder="Duration"/>
+            <select name="form" id="priority">
+                <option selected="true" disabled="disabled">What priority?</option>
+                <option value="high" class="red">High Priority</option>
+                <option value="medium"  class="yellow">Medium Priority</option>
+                <option value="low" class="green">Low Priority</option>
+            </select>
+            <input type="submit" id="new-task-submit" value="Add Task"/>
+        </form>
+    </header>
+        <main>
+            <section class="task-list">
+                <div class="top">
+                    <h2>Tasks</h2>
+                    <select name="sort" id="sort">
+                        <option selected="true" disabled="disabled">Sort by:</option>
+                        <option value="sortDate" class="sortDate"> Due Date</option>
+                        <option value="sortPriority"  class="sortPriority">Priority</option>
+                    </select>
+                    <input type="submit" id="okSort" value="Click here to sort"/>
+                </div>
+                
+                <div id="tasks">
+                    <!-- <div class="task">
+                        <div class="content">
+                            <input type="text" class="text" value="My task" readonly>
+                        </div>
+                    
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div> -->
+                </div>
+
+            </section>
+        </main>
+        <script src="index.js"></script>
+    
+</body>
+</html>
